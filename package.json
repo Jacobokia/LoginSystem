@@ -1,0 +1,16 @@
+{
+  "name": "loginsystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Okia Jacob",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express-session": "^1.16.2",
+    "mocha": "^6.2.0"
+  }
+}

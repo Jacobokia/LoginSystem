@@ -1,0 +1,133 @@
+                                        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/css/bootstrap.css">
+    <link rel="stylesheet" href="css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div  id="MainDiv" class="container">
+            <h1>Registration Form</h1>
+            <form action="userdetails"  method="POST" >
+
+            <table>
+                <tr>
+                    <td><label for="UserId" class="label">User Id:</label></td>
+                    <td><input type="text" name="userid" id="userId" class="form-control" ><span id="userIdInvalid" style="color: red ; visibility: hidden" >Required and must be of length 5 to 12.</span> </td>
+                </tr>
+
+                <tr>
+                    <td><label for="Password" class="label" class="form-control">Password:</label></td>
+                    <td>
+                            <input type="password" name="password" id="pass" class="form-control" style="width: 350px;">
+                            <span id="passwordInvalid" style="color: red ; visibility:hidden">Required and must be of length 7 to 12.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name"  class="name"  >Name:</label>
+                    </td>
+                    <td>
+                            <input type="text" id="name" class="form-control" name="name" style="width: 350px;">
+                            <span id="invalidName" style="color: red ; visibility:hidden;">Required and alphabates only</span>
+                          <!-- <span id="alphabet" style="color: red ; visibility: hidden;"; >Password should be alphabets only</span>-->  
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Address" class="label" >Address:</label>
+                    </td>
+                    <td>
+                            <input type="text" id="address" name="address" class="form-control" style="width: 350px;">
+                            <span id="addressOptional" style="color: red; visibility:hidden;">Optional</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="country" class="label">Country:</label>
+                    </td>
+                    <td>
+                        <select name="country" id="country" class="form-control" style="width: 350px">
+                                    <option value="">Please select the Country</option>
+                                    <option value="USA" class="country">USA</option>
+                                    <option value="Uganda" class="country">Uganda</option>
+                                    <option value="Kenya" class="country">Kenya</option>
+                 
+                        </select>
+                        <span id="countrySelect" style="color: red; visibility:hidden;">Required. Must be selected</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Zip" class="label">Zip Code:</label>
+                    </td>
+                    <td>
+                        <input type="number" name="zip" id="zip" class="form-control" style="width: 350px;">
+                        <span id="zipNeeded" style="color: red; visibility:hidden;">Required. Must be Numeric only</span>
+                        <span id="numeric" style="color: red; visibility:hidden">Required. Must be Numeric only</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email" class="label">Email:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" class="form-control" id="email" style="width: 350px;">
+                        <span id="emailneeded" style="color: red; visibility:hidden">Required. Must be a valid email</span>
+                        <span id="emailinvalid" style="color: red; visibility:hidden">Required. Must be a valid email</span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sex" class="label">Sex:</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" class="sex" id="sexmale" value="male" unchecked>Male &nbsp;
+                        <input type="radio" name="gender" class="sex" id="sexfemale" value="female" unchecked>Female
+                        <span id="gender" style="color: red; visibility:hidden">Required</span> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="language" class="label">Language:</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="language" id="english" value="english" unchecked >English &nbsp;
+                        <input type="checkbox" name="language" id="nonenglish" value="non-english" unchecked >Non-English 
+                        <span id="language" style="color: red ; visibility:hidden">Required</span> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="textarea" class="label ">About:</label>
+                    </td>
+                    <td>
+                        <textarea name="textarea" id="" cols="30" rows="10" class="form-control"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    
+                    <td><button type="submit"  class="btn btn-primary" onclick="validate()">Submit</button></td>
+                </tr>
+            </table>
+                
+
+                
+                
+                
+
+                
+
+
+                
+    <script src="script.js"></script>
+</body>
+</html>
